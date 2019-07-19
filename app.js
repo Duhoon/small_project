@@ -32,6 +32,12 @@ router.get('/dusignup', function (req, res) {
     console.log(req.query);
 });
 
+router.get('/dusignin', function (req, res) {
+    res.send('Request parameters : '+req.query.email+', '+req.query.password)
+    console.log(req.query);
+//__dirname : It will resolve to your project folder.
+});
+
 app.use('/', router);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

@@ -12,23 +12,24 @@
     </head>
 
     <body>
-        <!--네비게이션 바-->
+         <!--네비게이션 바-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <div class="col">
                 <a class="navbar-brand" href="/"><em>Dugram</em></a>
             </div>        
             <ul class="navbar-nav">
+               
                 <li class="nav-item">
-                    <a class="nav-link ">Home</a>
+                        <a class="nav-link " href="/duindex">메인화면</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active">Nottice</a>
+                        <a class="nav-link active" href="/dunottice">게시판</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Sign up</a>
+                        <a class="nav-link" href="/dusign">가입</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#myModal">Login</a>
+                        <a class="nav-link" data-toggle="modal" data-target="#myModal">로그인</a>
                     </li>
                 </ul>
         </nav>
@@ -38,7 +39,7 @@
             <h1>금일 인기 게시물</h1>
             <div class="card-deck bg-light">
                 <div class="card text-center">
-                    <a href="#" class="text-dark">
+                    <a data-toggle="modal" data-target="#mymodal2" class="text-dark">
                     <img src="/images/c_1.jpg" style="height:15em; width:100%">
                     <div class="card-body">
                         <h3>여행은 언제나 재밌어</h3>
@@ -65,11 +66,9 @@
         <div class="container mt-5 bg-light">
             <h1>최근 업로드</h1>
             <div class="card-columns bg-light">
-                <div class="card text-center">
-                    <img src="/images/c_1.jpg" style="height:15em; width:100%">
-                    <div class="card-body">
-                        <h3>여행은 언제나 재밌어</h3>
-                        <p>여행으로 힐링한다.</p>
+                <div class="card text-center bg-warning ">
+                    <div class="card-body my-5">
+                        <h2>여행</h2>
                     </div>
                 </div>
                 <div class="card text-center">
@@ -87,7 +86,7 @@
                     </div>
                 </div>
                 <div class="card text-center">
-                    <img src="/images/c_1.jpg" style="height:15em; width:100%">
+                    <img src="/images/c_3.jpg" style="height:15em; width:100%">
                     <div class="card-body">
                         <h3>여행은 언제나 재밌어</h3>
                         <p>여행으로 힐링한다.</p>
@@ -100,7 +99,7 @@
                     </div>
                 </div>
                 <div class="card text-center">
-                    <img src="/images/c_3.jpg" style="height:15em; width:100%">
+                    <img src="/images/c_1.jpg" style="height:15em; width:100%">
                     <div class="card-body">
                         <h3>인생사 세옹지마</h3>
                         <p>어디로 튈지 모른다.</p>
@@ -114,17 +113,15 @@
                     </div>
                 </div>
                 <div class="card text-center">
-                    <img src="/images/c_2.jpg" style="height:15em; width:100%">
+                    <img src="/images/c_3.jpg" style="height:15em; width:100%">
                     <div class="card-body">
                         <h3>여행은 언제나 재밌어</h3>
                         <p>여행으로 힐링한다.</p>
                     </div>
                 </div>
-                <div class="card text-center">
-                    <img src="/images/c_3.jpg" style="height:15em; width:100%">
-                    <div class="card-body">
-                        <h3>인생사 세옹지마</h3>
-                        <p>어디로 튈지 모른다.</p>
+                <div class="card text-center bg-success">
+                    <div class="card-body my-5">
+                        <h2>음식</h2>
                     </div>
                 </div>    
             </div>
@@ -133,7 +130,7 @@
         <!-- 끝 -->
 
         <!--로그인 화면 모달-->
-            <div class="modal fade" id="myModal">
+        <div class="modal fade" id="myModal">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content text-center">
                         <div class="modal-header">
@@ -141,17 +138,17 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <form action="#" method="GET">
+                            <form action="/dusignup" method="GET">
                                 <div class="">
                                     <div class="form-group form-inline">
                                         <label class="mr-3">Email : </label>
-                                        <input type="email" class="form-control col">
+                                        <input type="email" class="form-control col" name="email">
                                     </div>
                                 </div>
                                 <div class="">
                                     <div class="form-group form-inline">
                                         <label class="mr-3">PW : </label>
-                                        <input type="email" class="form-control col">
+                                        <input type="password" class="form-control col" name="password">
                                     </div>
                                 </div>
                                 <div class="justify-content-center">
@@ -162,6 +159,21 @@
                     </div>
                 </div>
             </div>
+            <!--detail 모달화면-->
+            <div class="modal fade" id="mymodal2">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-tilte text-center">여행은 언제나 재밌어</h3>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="/images/c_1.jpg" style="height:15em; width:100%">
+                            <p>여행으로 힐링한다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>      
     </body>
 
 </html>
