@@ -29,6 +29,7 @@ res.sendFile(path.join(__dirname + '/views/kdh/sign.html'));
 });
 
 router.get('/dusignup', function (req, res) {
+    res.send('Request parameters : '+req.query.email+', '+req.query.password)
     console.log(req.query);
 });
 
