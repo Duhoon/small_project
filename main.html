@@ -12,9 +12,27 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-dark bg-primary fixed-top">
-                <a class="navbar-brand border-primary" href="/">Hello</a>
+        <!--네비게이션 바-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <div class="col">
+                <a class="navbar-brand" href="/"><em>Dugram</em></a>
+            </div>        
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                        <a class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Nottice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#myModal">Login</a>
+                    </li>
+                </ul>
         </nav>
+        <div class="row my-4"></div> <!--네비게이션바 마진-->
         <div class="row my-5"></div>
         <div class="container my-5">
             <div class="card-deck">
@@ -31,7 +49,7 @@
                         <h3 class="card-title">
                             Duhoon's Project
                         </h3>
-                        <button type="button" class="btn btn-primary" href="/duindex.html">메인으로</button>
+                        <button type="button" class="btn btn-primary" href="/duindex"><a class="text-white" href="/duindex">메인으로</a></button>
                     </div>
                 </div>
             </div>
