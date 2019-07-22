@@ -39,6 +39,16 @@ router.get('/dusignin', function (req, res) {
 //__dirname : It will resolve to your project folder.
 });
 
+router.get('/jjsignup', function (req, res) {
+res.sendFile(path.join(__dirname + '/views/jjj/signup.html'));
+//__dirname : It will resolve to your project folder.
+})
+
+router.get('/jjmain', function (req, res) {
+res.sendFile(path.join(__dirname + '/views/jjj/main.html'));
+//__dirname : It will resolve to your project folder.
+});
+
 app.use('/', router);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
